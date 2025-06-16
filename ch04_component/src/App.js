@@ -8,7 +8,11 @@ import "./App.css";
 // import MyComponent from "./ex05_arrow/MyComponent";
 // import MyComponent from "./ex06_destructing/MyComponent";
 // import Team from "./ex07_composition/Team";
-import Comment from "./ex08_extraction/Comment";
+// import Comment from "./ex08_extraction/Comment";
+// import Comment from "./ex09_extraction/Comment";
+// import Comment from "./ex10_extraction/Comment";
+// import Comment from "./ex11_extraction/Comment";
+import Comment from "./ex12_extraction/Comment";
 
 function App() {
   // return (
