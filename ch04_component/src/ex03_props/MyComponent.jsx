@@ -3,6 +3,7 @@
  * 데이터를 전달할 때 사용하는 객체이다.
  * props는 다른 이름으로 변경 가능하지만, 관습적으로 props를 사용함.
  */
+
 import './Child.css';
 
 function MyComponent(props){

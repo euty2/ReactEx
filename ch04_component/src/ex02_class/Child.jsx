@@ -1,4 +1,4 @@
-import './Child.css'
+import './Child.css';
 import React, { Component } from 'react';
 
 // 클래스 컴포넌트
