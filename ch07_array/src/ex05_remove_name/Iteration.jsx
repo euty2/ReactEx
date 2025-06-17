@@ -1,3 +1,6 @@
+/**
+ * 더블클릭하면 list의 내용을 삭제한다.
+ */
 import { useState } from 'react';
 
 const Iteration = () => {
@@ -12,7 +15,17 @@ const Iteration = () => {
 
     const onChange = (e)=>setInputText(e.target.value);
 
-    const nameList = names.map((name)=><li key={name.id}>{name.text}</li>);
+    const onRemove = (id)=>{
+        // 배열에서 id와 일치하는 것은 제외하고, 나머지만 다시 배열로 추출
+        const nextNames = names.filter((name)=>name.id !== id);
+        setNames(nextNames);
+    }
+
+    const nameList = names.map((name)=>(
+        <li key={name.id} onDoubleClick={()=>onRemove(name.id)}>
+            {name.text}
+        </li>)
+    );
     const onClick = () =>{
         // 새로운 객체를 만든다.
         const nextNames = [
