@@ -4,16 +4,30 @@ import { useState } from 'react';
 여러 개의 요소 이벤트를 처리하는 방식
  */
 const EventPractice = () => {
-    const [username, setUsername] = useState("");
-    const [message, setMessage] = useState("");
+    const [form, setForm] = useState({
+        username: "",
+        message: ""
+    });
 
-    const onChangeUsername = (e)=>setUsername(e.target.value);
-    const onChangeMessage = (e)=>setMessage(e.target.value);
+    const { username, message } = form;
+
+    const onChange = (e)=>{
+        const nextForm = {
+            ...form,
+            [e.target.name] : e.target.value
+        }
+
+        setForm(nextForm);
+    }
+
     const onClick = ()=>{
         alert(username + ":" + message);
-        setUsername("");
-        setMessage("");
+        setForm({
+            username: "",
+            message: ""
+        })
     }
+
     const onKeyDown = (e)=>{
         if(e.key==="Enter") onClick();
     }
@@ -22,9 +36,9 @@ const EventPractice = () => {
         <div>
             <h1>이벤트 연습</h1>
             <input type="text" name="username" placeholder="사용자명"
-                    value={username} onChange={onChangeUsername} />
+                    value={username} onChange={onChange} />
             <input type="text" name="message" placeholder="아무거나 입력해 보세요"
-                    value={message} onChange={onChangeMessage} onKeyDown={onKeyDown} />
+                    value={message} onChange={onChange} onKeyDown={onKeyDown} />
             <button onClick={onClick}>확인</button>
         </div>
     )
