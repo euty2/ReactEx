@@ -22,7 +22,14 @@ import './App.css';
 // import SubApp from './ex20_update/SubApp';
 // import SubApp from './ex21_update/SubApp';
 // import SubApp from './ex22_update/SubApp';
-import SubApp from './ex23_update/SubApp';
+// import SubApp from './ex23_update/SubApp';
+// import SubApp from './ex24_update/SubApp';
+// import SubApp from './ex25_update/SubApp';
+// import SubApp from './ex26_update/SubApp';
+// import SubApp from './ex27_update/SubApp';
+// import SubApp from './ex28_delete/SubApp';
+// import SubApp from './ex29_divide_component/SubApp';
+import SubApp from './ex30_divide_component/SubApp';
 
 function App() {
   return (
